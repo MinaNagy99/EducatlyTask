@@ -1,0 +1,32 @@
+.band {
+  width: 35%;
+  height: 7vh;
+}
+.container-bandsLeft {
+  transform: skewY(-12deg);
+}
+.container-bandsRight {
+  transform: skewY(-12deg);
+}
+.bandColor1 {
+  background-color: #d6bbfb;
+}
+
+.bandColor2 {
+  background-color: #e9d7fe;
+}
+
+.bandColor3 {
+  background-color: #f4ebff;
+}
+.backgroundPattern{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    transform: translateY(70%);
+}
+
+
+

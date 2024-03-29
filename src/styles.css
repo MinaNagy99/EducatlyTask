@@ -1,0 +1,73 @@
+/* Define root variables */
+:root {
+  --bg-main: #f9f5ff;
+  --bg-button-color: #f4ebff;
+  --text-main-color: #6941c6;
+  --text-second-color: #42307d;
+  --title-blog-color: #101828;
+  --description-blog-color: #667085;
+  --fs-48px: 48px;
+  --fs-36px: 36px;
+  --fs-24px: 24px;
+  --fs-20px: 20px;
+  --fs-18px: 18px;
+  --fs-14px: 14px;
+}
+* {
+  box-sizing: border-box !important;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--bg-main);
+  font-family: "Inter" !important;
+}
+.bg-button {
+  background-color: var(--bg-button-color) !important;
+}
+
+.text-mainColor {
+  color: var(--text-main-color) !important;
+}
+.text-secondColor {
+  color: var(--text-second-color) !important;
+}
+.text-semiBlack {
+  color: var(--title-blog-color) !important;
+}
+.text-descBlog {
+  color: var(--description-blog-color) !important;
+}
+.fs-mainHeader {
+  font-size: var(--fs-48px) !important;
+}
+.fs-subTitle {
+  font-size: var(--fs-20px);
+}
+.fs-blogTitle {
+  font-size: var(--fs-24px);
+}
+.fs-14 {
+  font-size: var(--fs-14px) !important;
+}
+.fs-24 {
+  font-size: var(--fs-24px) !important;
+}
+.fw-600 {
+  font-weight: 600 !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fs-mainHeader {
+    font-size: var(--fs-36px) !important;
+  }
+  .fs-subTitle {
+    font-size: var(--fs-18px);
+  }
+  .fs-blogTitle {
+    font-size: var(--fs-20px);
+  }
+}

@@ -1,0 +1,47 @@
+<app-loading *ngIf="isLoading"></app-loading>
+
+<div *ngIf="!isLoading">
+  <div class="px-3 px-lg-0">
+    <div class="d-flex px-md-0 px-2 justify-content-center my-5">
+      <div class="position-relative customWidth">
+        <input
+          type="text"
+          class="ps-5 customWidth searchInput py-2"
+          placeholder="Search"
+          [(ngModel)]="searchValue"
+          (input)="search()"
+        />
+        <i class="bi bi-search"></i>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div *ngIf="searchResult.length == 0" class="row row-gap-4">
+      @for(blog of blogs; track $index){
+
+      <app-blog-item
+        class="col-lg-4 col-md-6 col-12"
+        [blog]="blog"
+      ></app-blog-item>
+      }
+    </div>
+    <div *ngIf="searchResult.length > 0" class="row row-gap-4">
+      @for(blog of searchResult; track $index){
+
+      <app-blog-item
+        class="col-lg-4 col-md-6 col-12"
+        [blog]="blog"
+      ></app-blog-item>
+      }
+    </div>
+    <div *ngIf="currentPage < 6" class="text-center my-5">
+      <button
+        (click)="loadMore()"
+        class="border-0  text-center d-inline m-auto text-mainColor fs-6 py-2 px-3 rounded-2"
+      >
+      
+        Load more
+      </button>
+    </div>
+  </div>
+</div>

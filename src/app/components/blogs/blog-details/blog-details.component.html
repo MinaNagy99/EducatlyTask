@@ -1,0 +1,23 @@
+<div class="bg-white shadow-blog p-4">
+  <img src="{{ blog.cover_image }}" alt="" />
+  <p class="fs-14 fw-600 my-3 text-mainColor">
+    {{ blog.tag_list  }}
+  </p>
+  <div class="d-flex justify-content-between">
+    <h2 class="fs-blogTitle fw-600 text-semiBlack mb-3">
+      {{ blog.title }}
+    </h2>
+    <i class="bi bi-arrow-up-right fs-24 fw-600 text-semiBlack"></i>
+  </div>
+  <p class="text-descBlog fs-6 fw-400 mb-4">{{blog.description}}</p>
+
+  <div class="row mt-5 mb-0">
+    <div class="col-1">
+      <img  src={{blog.user.profile_image}} alt="" class="avatar-img w-50 rounded-circle " />
+    </div>
+    <div class="col-10">
+        <p class="fw-medium text-semiBlack p-0 mb-0 fs-14">{{blog.user.name}}</p>
+        <p class="fw-medium text-descBlog mb-0 fw-400 fs-14">{{blog.created_at.split('')}}</p>
+    </div>
+  </div>
+</div>
